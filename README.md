@@ -13,4 +13,6 @@ Update the new `.env` file with your environment variables
 
 Run the followinng bash commands
 
+`npm install`
+
 `npm run start:dev`
