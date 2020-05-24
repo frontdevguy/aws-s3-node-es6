@@ -16,14 +16,14 @@ export const UploadToS3 = (file) => {
 		Bucket: AWS_S3_BUKECT_NAME,
 		Key: `${new Date().getTime()}.${file.name.toLowerCase().replace(/ /g, '_')}`,
 		Body: file.data,
-		ContentType: file.mimeType,
+		ContentType: file.mimetype,
 		ACL: 'public-read',
 	};
 
 	return new Promise((resolve, reject) => {
 		s3.upload(params, (err, data) => {
-			if (err) reject(err);
-			resolve({
+			if (err) return reject(err);
+			return resolve({
 				path: data.Location,
 				filename: file.name,
 				size: file.size,
