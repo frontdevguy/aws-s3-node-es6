@@ -12,7 +12,7 @@ const s3 = new AWS.S3({
 });
 
 export const UploadToS3 = (file) => {
-	var params = {
+	const params = {
 		Bucket: AWS_S3_BUKECT_NAME,
 		Key: `${new Date().getTime()}.${file.name.toLowerCase().replace(/ /g, '_')}`,
 		Body: file.data,
