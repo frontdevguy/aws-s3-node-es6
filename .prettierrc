@@ -1,0 +1,8 @@
+{
+    "printWidth": 125,
+    "trailingComma": "all",
+    "tabWidth": 6,
+    "semi": true,
+    "singleQuote": true
+}
+  

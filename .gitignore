@@ -1,0 +1,13 @@
+# Dependencies
+node_modules
+
+# Environment varibales
+.env*
+!.env*.example
+
+# Logs
+logs/*
+
+server.test.js
+server.dev.js
+
