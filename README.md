@@ -1,4 +1,4 @@
-# AWS3 NodeJS ES6 
+# AWS S3 Bucket File Upload 
 Upload files to AWS S3 Bucket
 
 ## Setup Environment
