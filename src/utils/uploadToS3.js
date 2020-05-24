@@ -20,9 +20,9 @@ export const UploadToS3 = (file) => {
 		ACL: 'public-read',
 	};
 
-	return new Promise((resolve, reject) => {
+	return new Promise ((resolve, reject) => (
 		s3.upload(params, (err, data) => {
-			if (err) return reject(err);
+		if (err) return reject(err);
 			return resolve({
 				path: data.Location,
 				filename: file.name,
@@ -30,6 +30,6 @@ export const UploadToS3 = (file) => {
 				encoding: file.encoding,
 				mimetype: file.mimetype,
 			});
-		});
-	});
+		}))
+	);
 };
